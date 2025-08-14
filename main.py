@@ -2,7 +2,7 @@ import streamlit as st
 from interactive_viewer import InteractiveViewer
 
 def main():
-    st.title("Interactive 3D Black Hole")
+    st.title("Spatial Debug View: Accretion Disk and Object Coordinates")
     
     if st.button("Show Interactive Simulation"):
         viewer = InteractiveViewer()

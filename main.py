@@ -1,8 +1,12 @@
 import streamlit as st
-from plotly_blackhole import BlackHoleVisualizer
+from interactive_viewer import InteractiveViewer
 
-st.title("Realistic Black Hole Visualization")
+def main():
+    st.title("Interactive 3D Black Hole")
+    
+    if st.button("Show Interactive Simulation"):
+        viewer = InteractiveViewer()
+        st.plotly_chart(viewer.fig, use_container_width=True)
 
-if st.button("Show Interactive Black Hole"):
-    vis = BlackHoleVisualizer()
-    st.plotly_chart(vis.fig, use_container_width=True)
+if __name__ == "__main__":
+    main()
